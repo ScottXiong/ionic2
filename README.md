@@ -40,3 +40,81 @@ export class HomePage {
   </button>
 </ion-list>
 ```
+## detailpage 5 步走
+在HomePage的click的函数中
+```
+//1
+itemSelected(item){
+    this.navCtrl.push(DetailPage,{
+      item:item
+    });
+    // alert(item.id+1)
+  }
+//2
+import {DetailPage} from '../detail/detail';
+```
+
+### DetaiPage 接收变量
+```
+export class DetailPage {
+  item:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.item=navParams.get('item')
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad DetailPage');
+  }
+
+}
+
+```
+
+## app.moduls.ts
+```
+import { NgModule, ErrorHandler } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { MyApp } from './app.component';
+
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
+import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
+import {DetailPage} from '../pages/detail/detail';
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+@NgModule({
+  declarations: [
+    MyApp,
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+    DetailPage
+  ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+    DetailPage
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
+})
+export class AppModule {}
+
+```
+
