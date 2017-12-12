@@ -8,3 +8,35 @@ ionic lab
 # table of contents
 - app 根目录
 - tab 根page
+
+```
+ionic g page detail //creat one page
+
+```
+
+## ui component
+- list
+```
+//ts
+export class HomePage {
+  items:any[];
+  constructor(public navCtrl: NavController) {
+    this.items=[];
+    for(let i=0;i<10;i++){
+      this.items.push({
+        item:"item"+(i+1),
+        id:i
+      })
+    }
+  }
+  itemSelected(item){
+    alert(item.item)
+  }
+}
+//html
+<ion-list>
+  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    {{ item.item }}
+  </button>
+</ion-list>
+```
