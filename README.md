@@ -40,7 +40,7 @@ export class HomePage {
   </button>
 </ion-list>
 ```
-## detailpage 5 步走
+## detailpage 6 步走(会用到2个函数)
 在HomePage的click的函数中
 ```
 //1
