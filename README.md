@@ -120,3 +120,18 @@ export class AppModule {}
 
 ```
 
+### 在mock数据的时候最好给个id，可以通过`*ngIf="item.id==1"`来控制具体某个深度链接的显示
+```
+[
+ {"name":"scott","age":18,"compony":"Benchmark","id":1},
+ {"name":"Tina","age":18,"compony":"Benchmark","id":2},
+ {"name":"Timmy","age":18,"compony":"Benchmark","id":3},
+ {"name":"Panda","age":18,"compony":"Benchmark","id":4},
+ {"name":"Arran","age":18,"compony":"Benchmark","id":5},
+ {"name":"judy","age":18,"compony":"Benchmark","id":6},
+ {"name":"Simon","age":18,"compony":"Benchmark","id":7},
+ {"name":"Paige","age":18,"compony":"Benchmark","id":8},
+ {"name":"Ivy","age":18,"compony":"Benchmark","id":9}
+]
+```
+
