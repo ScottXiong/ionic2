@@ -120,7 +120,7 @@ export class AppModule {}
 
 ```
 
-### 在mock数据的时候最好给个id，可以通过`*ngIf="item.id==1"`来控制具体某个深度链接的显示
+### 在mock数据的时候最好给个id，可以通过`*ngIf="item.id==1"`来控制具体某个深度链接的显示和隐藏
 ```
 [
  {"name":"scott","age":18,"compony":"Benchmark","id":1},
