@@ -1,4 +1,6 @@
 # ionic2
+type must be one of: component, directive, page, pipe, provider, tabs (not componet)
+
 ```
 sudo cnpm i cordova ionic -g
 ionic start myapp --v2 //会报错--v1 --v2 has been removed,使用下面这句
